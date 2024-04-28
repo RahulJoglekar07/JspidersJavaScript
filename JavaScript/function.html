@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>java script</h1>
+    <h2>Function</h2>
+
+    <script>
+        function Cofee(){
+            let milk="100ml milk"
+            let cofee_pow="20g Cofee powder"
+            let sugar="40gm Sugar"
+
+            console.log(milk+cofee_pow+sugar);
+        }
+        Cofee();
+
+        function Cofee_r(x,y,z){
+            var milk=x;
+            var cofee_pow=y;
+            var sugar=z;
+            var cup=(milk+cofee_pow+sugar)
+
+            console.log(cup);
+        }
+        Cofee_r("100ml milk"," 20g Cofee powder"," 40gm Sugar");
+
+        var test=function(x,y){
+            console.log(x,y);
+            return x+y
+        }
+        console.log(test(4,5));
+
+    </script>
+</body>
+</html>

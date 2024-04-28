@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+    <!-- it is Object -->
+    <!-- Used to perform Asicronus Operation-->
+    <!-- States 1.pending 2.fulfilled 3.reject -->
+</head>
+<body>
+    <script>
+        console.log("1");
+        console.log("2");
+
+        // confirm("hello how are you")
+        setTimeout(()=>{confirm("hello how are you")},0)
+
+      let mypromise= new Promise(()=>{
+
+      })
+      console.log(mypromise);
+
+      let mypromise1= new Promise((resolve,reject)=>{
+        res("i am resolve function")
+    }).then((e)=>{
+        console.log(e);
+        console.log("i am then");
+    })
+    console.log(mypromise1);
+
+    let mypromise2= new Promise((resolve,reject)=>{
+        rej("i am reject function")
+        
+    }).catch((err)=>{
+        console.log("i am catch");
+    })
+    console.log(mypromise2);
+      
+
+    console.log("3");
+    console.log("4");
+
+
+    </script>
+</body>
+</html>

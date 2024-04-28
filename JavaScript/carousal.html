@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 5px solid black;
+            height: 300px;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="" alt="" height="300px" width="100%">
+    </div>
+    <h1></h1>
+    <h1></h1>
+    <button>previous</button><button>next</button>
+<script>
+let div=document.querySelector("div")
+// console.log(div);
+let h1=document.querySelectorAll("h1")
+// console.log(h1);
+let btn=document.querySelectorAll("button")
+let img=document.querySelector("img")
+let num=0
+
+let data =[
+{
+    ima:"https://cdn.pixabay.com/photo/2024/01/08/15/54/defile-8495836_1280.jpg",
+    name:"mountains",
+    place:"khasmir"
+},
+{
+    ima:"https://cdn.pixabay.com/photo/2024/01/18/16/54/leaves-8517219_640.jpg",
+    name:"plant",
+    place:"sirsi"
+}
+
+]
+btn[0].addEventListener("click",()=>{
+    num--
+    if(num<0){
+        num=data.length-1
+    }
+    event(num)
+})
+btn[1].addEventListener("click",()=>{
+    num++
+    if(num>data.length-1){
+        num=0
+    }
+    event(num)
+})
+
+
+function event(num) {
+img.src=data[num].ima
+h1[0].innerText=data[num].name; 
+h1[1].innerText=data[num].place;
+    
+}
+
+window.addEventListener("DOMContentLoaded",()=>{
+    event(0)
+})
+
+setInterval(() => {
+    num++
+    if(num>data.length-1)
+    {
+        num=0
+    }
+    event(num)
+}, 2000);
+
+
+
+</script>
+</body>
+</html>

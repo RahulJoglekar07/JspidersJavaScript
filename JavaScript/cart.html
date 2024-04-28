@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main{
+        height: 400px;
+        width: 1450px;
+
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .wrapper{
+        height: 200px;
+        width: 200px;
+        margin-left: 650px;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        /* border: 2px solid black */
+
+    }
+    button{
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+   .num{
+    font-size: 25px;
+    margin-left: 10px;
+   }
+
+    .minus,.plus{
+        margin-left: 10px;
+        font-size: 25px;
+        cursor: pointer;
+        
+    }
+    .img:hover{
+        background-color: red;
+    }
+</style>
+<body>
+    <div class="main">
+    <div class="container">
+        </marquee>
+        <div class="img"><marquee behavior="" direction="" onmouseover="stop()" onmouseout="start()"><img height="200px" width="150px" src="iphoneimg.png" alt=""> </marquee></div>
+    </div>
+    <div class="wrapper">
+      <div> <h3>Price = Rs200</h3></div> 
+       <div class="box"> <h3>Qty = <button class="minus">-</button><span class="num">  01  </span> <button class="plus">+</button></h3> </div>
+    <div><h3>Discount =  33%</h3></div>
+    <div><h3>DiscountPrice =<span class="discount">134 </span> </h3></div>
+    <div><h3>Delivery =  5%</h3></div>
+    <div><h3>Delivery Charge =33Rs</h3></div>
+    <div><h3>Total Sum = <span class="total"> 141</span></h3></div>
+    </div>
+</div>
+
+    <script>
+        let num=document.querySelector('.num');
+        let minus=document.querySelector('.minus');
+        let plus=document.querySelector('.plus');
+        let total=document.querySelector('.total');
+        let discount=document.querySelector('.discount');
+
+
+       let a=1;
+       let b=141;
+       
+       plus.addEventListener("click",()=>{
+        a++;
+        a=(a<10)?"0"+a:a;
+        num.innerText=a;
+
+        total.innerText=141*a; 
+
+        discount.innerText=134*a; 
+       
+       })
+       minus.addEventListener("click",()=>{
+        if(a>1){
+        a--;
+        a=(a<10)?"0"+a:a;
+        num.innerText=a;
+        
+        total.innerText=141*a; 
+
+        discount.innerText=134*a; 
+
+        }
+       })
+
+       
+    //    plus.addEventListener("click",()=>{
+    //    total.innerText=141*a;  
+    // })
+
+    // minus.addEventListener("click",()=>{
+       
+    //    total.innerText=d-141;
+
+    // })
+    // plus.addEventListener("click",()=>{
+
+    //     discount.innerText=134*a;
+    //    })
+    //    minus.addEventListener("click",()=>{
+    //     discount.innerText=134/a;
+    //    })
+      
+
+        </script>
+</body>
+</html>

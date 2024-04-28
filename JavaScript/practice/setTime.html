@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello</h1>
+    <script>
+       
+        let h1=document.querySelector('h1')
+        alert("hello")
+ 
+       let a= setTimeout(function(){
+           h1.innerText="hello success"
+            alert("i am inside of set time out")
+        },5000)
+        
+        // let b= prompt('clear timeout ?','yes or no ')
+         
+        // if(b=="yes"){
+        //     clearTimeout(a)
+        // }
+
+       function sum(a,b) {
+        console.log(a+b," Sum is Done");
+        
+       }
+       setTimeout(sum,7000,3,4)
+
+
+       let mul=(x,y)=>{
+         console.log(x*y,'Multiplication is done');
+       }
+       setTimeout(mul,9000,2,4)
+
+      let d= setInterval(() => {
+        alert("hello")
+       }, 2000);
+
+       setTimeout (()=>{
+        clearInterval(d)
+       },6000)
+    
+    </script>
+</body>
+</html>

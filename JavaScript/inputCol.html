@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>js</h1>
+    <input type="text">
+    <button>Give Color</button>
+    <br><br>
+    <input type="text" id="input">
+    <select name="" id="">
+        <option value="odd">odd</option>
+        <option value="even">even</option>
+        <option value="prime">prime</option>
+    </select>
+
+    <button id="button">check even or not </button>
+    <h2>Get info</h2>
+   
+    <script>
+        let inp=document.querySelector("input");
+        let btn=document.querySelector("button");
+        
+        let h2=document.querySelector("h2");
+        let butt=document.querySelector("#button");
+
+        
+
+
+        btn.addEventListener("click",()=>{
+            let dataval=inp.value.trim()
+            // console.log(dataval);
+             document.body.style.background=dataval
+        }) 
+        butt.addEventListener("click",()=>{
+            let val=input.value.trim()
+            if(val%2===0){
+                h2.innerText=`${val} is even number`
+                
+            }
+            else{
+                h2.innerText=`${val} is not even number`
+            }
+            
+        }) 
+        function speak(talk){
+            let speech=new SpeechSynthesisUtterance(talk);
+            window.SpeechSynthesis.speak(speech)
+        }
+
+       
+       
+
+    </script>
+</body>
+</html>

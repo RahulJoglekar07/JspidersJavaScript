@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objrct/Array</h1>
+    <script>
+        var obj={lang1:'kannada',lang2:{lang:'english'},lang3:{lang:'hindi'}}
+        console.log(obj.lang3.lang);
+        
+        var arr=[1,['hii','hello',[200]]];
+        console.log(arr[1][2][0]);
+        var [one,[two,three,[four]]]=arr;
+        console.log(one);
+        console.log(four);
+        // console.log( typeof two);
+
+        var lang=['java','python',['html','css',['java script']]]
+        console.log(lang[2][2][0]);
+        var [a,[c,d,f,g,h,e]]=lang;
+        console.log(f);
+    //    console.log( typeof e);
+    </script>
+</body>
+</html>

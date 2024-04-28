@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>BOM</h1>
+    <script>
+        // WINDOW
+        console.log(window);
+        console.log(window.screen.height);
+        console.log(window.screen.availHeight);
+        console.log(window.screen.width);
+        console.log(window.screen.availWidth);
+
+        // NVIGATOR
+        console.log(navigator);
+        // CURRENT LOCATION
+        navigator.geolocation.getCurrentPosition((e)=>{  
+            console.log(e);
+            console.log(e.coords.latitude);
+            console.log(e.coords.longitude);
+        })
+
+        // HISTORY
+        history.forward(2)
+        // history.back()
+
+
+    //    LOCATION
+        console.log(location);
+        // location.reload()
+        // location.replace("https://www.flipkart.com/triggr-kraken-x2-quad-mic-enc-40-hr-battery-rapid-pair-40ms-low-latency-gaming-v5-3-bluetooth-gaming-headset/p/itmc79caf9a90ab8?pid=ACCGRMF2YGF5JGCJ&lid=LSTACCGRMF2YGF5JGCJ8MNFBA&marketplace=FLIPKART&pageUID=1706543070249")
+        
+
+    </script>
+</body>
+</html>

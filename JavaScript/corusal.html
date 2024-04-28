@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>corosla</title>
+
+  <style>
+    div{
+      height: 400px;
+      border: 5px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <img src="" alt="" height="400px" width="100%">
+  </div>
+  <h1></h1>
+  <h1></h1>
+  <button>Privious</button>
+  <button>Next</button>
+
+  <script>
+    let div=document.querySelector("div")
+    let img=document.querySelector("img")
+    let h1=document.querySelectorAll("h1")
+    let btn=document.querySelectorAll("button")
+    num=0;
+
+    let data=[
+      {
+        img:"https://cdn.pixabay.com/photo/2024/01/27/18/24/squirrel-8536537_1280.jpg",
+        Animal:"Squidal",
+        place:"india"
+      },
+      {
+        img:"https://cdn.pixabay.com/photo/2023/11/13/03/07/pond-8384421_1280.jpg",
+        Animal:"sinory",
+        place:"india"
+
+      }
+    ]
+
+    function slider(no) {
+      img.src=data[no].img;
+      h1[0].innerText=data[no].Animal;
+      h1[1].innerText=data[no].place;
+      
+    }
+
+    btn[0].addEventListener("click",()=>{
+      num--;
+      if(num<0){
+        num=data.length-1
+    }
+    slider(num);
+})
+     btn[1].addEventListener("click",()=>{
+  num++;
+  if(num>0){
+    num=data.length-1
+    num=0
+  }
+  slider(num);
+ })
+
+
+  </script>
+  
+</body>
+</html>

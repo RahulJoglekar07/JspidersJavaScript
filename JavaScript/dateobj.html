@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Date Object</h1>
+  <script> 
+//   new Array()
+//     object()
+function test(){
+    var myDate=new Date();
+    console.log(myDate);
+    console.log(myDate.getDate());
+    console.log(myDate.getHours());
+    console.log(myDate.getDay());
+    console.log(myDate.getMonth());
+    console.log(myDate.getFullYear());
+    console.log(myDate.getMilliseconds());
+    console.log(myDate.getSeconds());
+   
+  var year=myDate.getFullYear();
+   var month=myDate.getMonth();
+   var date=myDate.getDate();
+   var day=myDate.getDay()
+   var hour=myDate.getHours();
+   var min=myDate.getMinutes();
+   var sec=myDate.getSeconds();
+
+
+    var months =['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var days=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    
+    console.log(`the current date is ${date}-${months[month]}-${year}-${days[day]} time-${hour}:${min}:${sec} `);
+  }
+    var sid=setInterval(()=>test(),1000)
+    // clearInterval(sid)
+    // var sit=setTimeout(() => {console.log('hii')}, 10000);
+    
+    setTimeout(() => {
+        clearInterval(sid)
+    //    clearTimeout(sid)        
+    }, 5000);
+</script> 
+</body>
+</html>

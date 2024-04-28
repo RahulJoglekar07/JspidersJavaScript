@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Java script</h1>
+    
+    <script>
+
+        // String Methods
+        var str1="hello"+(2+4)+"'i am happy !'";
+
+        var str2='hii'+4 +'"I am good !"';
+
+        var str3=`${str1} I am rahul From sirsi 
+        and good boy from karnataka${9+1}`;
+
+        console.log(str1);
+        console.log(str2);
+        console.log(str3);
+
+         var a="abcdefgh@gmail.com";
+         console.log(a.indexOf("g"));
+         console.log(a.indexOf("z")); //if index not present opt -1
+
+         console.log(a.startsWith("b"));
+         console.log(a.endsWith("m"));
+
+        //  TRIM start and ending space
+        var b="   rahul@gmail.com    "
+
+         console.log(b.includes("gmail.com"));
+          
+         console.log(b.trimStart().length);
+         console.log(b);
+
+         console.log(b.trimEnd().length);
+         console.log(b);
+
+         console.log(b.trim());
+         console.log(b);
+
+         var c="rahul joglekar"
+         console.log(c.slice(1,3));
+         console.log(c.slice(-10,));
+
+         console.log(c.indexOf("r"));
+         console.log(c.lastIndexOf("r"));
+         console.log(c[c.length-1]);
+        
+         
+        //  UPPER CASE AND LOWER CASE
+       
+       
+        console.log(c.toUpperCase());
+       
+        console.log(c.toLowerCase());
+
+
+    </script>
+</body>
+</html>

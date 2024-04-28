@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2px">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+    <input type="text">
+     <button>Submit</button>
+    <script>
+  let btn=document.querySelector("button")
+  let inp=document.querySelector("input")
+  let tds=document.querySelectorAll("td")
+
+  btn.addEventListener("click",()=>{
+    let val=inp.value;
+    for(let item of tds){
+        console.log(item.innerText);
+        if(val==item.innerText){
+            item.style.backgroundColor="green"
+            break
+        }
+    }
+    
+  })
+
+
+    </script>
+
+
+</body>
+</html>

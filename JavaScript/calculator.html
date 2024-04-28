@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+      input[type="text"]{
+        height: 50px;
+        width: 246px;
+        font-size: 40px;
+        border: 3px solid black;
+      }
+      [type="button"]{
+        height: 60px;
+        width: 60px;
+        border: 2px solid black;
+        font-size: 20px;
+      }
+      [type="button"]:hover{
+        background-color: greenyellow;
+      }
+      .container{
+        border: 5px solid blue;
+        width: 253px;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form action="">
+        <div >
+            <input type="text" name="data" id="ans">
+        </div>
+        <div>
+            <input type="button" value="1" onclick="ans.value+='1'" >
+            <input type="button" value="2" onclick="ans.value+='2'" >
+            <input type="button" value="3" onclick="ans.value+='3'" >
+            <input type="button" value="+" onclick="ans.value+='+'" >
+        </div>
+        <div>
+            <input type="button" value="4" onclick="ans.value+='4'" >
+            <input type="button" value="5" onclick="ans.value+='5'" >
+            <input type="button" value="6" onclick="ans.value+='6'" >
+            <input type="button" value="-" onclick="ans.value+='-'" >
+        </div>
+        <div>
+            <input type="button" value="7" onclick="ans.value+='7'" >
+            <input type="button" value="8" onclick="ans.value+='8'" >
+            <input type="button" value="9" onclick="ans.value+='9'" >
+            <input type="button" value="*" onclick="ans.value+='*'" >
+        </div>
+        <div>
+            <input type="button" value="0" onclick="ans.value+='0'" >
+            <input type="button" value="." onclick="ans.value+='.'" >
+            <input type="button" value='=' onclick="ans.value=eval(ans.value)" >
+            <input type="button" value="/" onclick="ans.value+='/'" >
+        </div>
+        <div>
+            <input type="button" value="sin()" onclick="ans.value=eval(Math.sin(ans.value))">
+            <input type="button" value="tan()" onclick="ans.value=eval(Math.tan(ans.value))" >
+            <input type="button" value="cos()" onclick="ans.value=eval(Math.cos(ans.value))">
+            <input type="button" value="pi" onclick="ans.value=eval(Math.pi(ans.value))">
+        </div>
+        <div>
+            <input type="button" value="sqrt" onclick="ans.value=eval(Math.sqrt(ans.value))">
+            <input type="button" value="cbrt" onclick="ans.value=eval(Math.cbrt(ans.value))" >
+            <input type="button" value="max" onclick="ans.value=eval(Math.max(ans.value))">
+            <input type="button" value="AC" onclick="ans.value=''">
+        </div>
+    </form>
+</div>
+</body>
+</html>

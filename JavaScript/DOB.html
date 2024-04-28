@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h">DOB : Document Object Browser</h1>
+    <h2 id="h"> CSS using Js</h2>
+    <h3>HELLO</h3>
+
+    <div class="myclass">item 1</div>
+    <div class="myclass">item 2</div>
+    <div class="myclass">item 3</div>
+
+    <div>
+        <aside>
+            <h2>i am inside inside </h2>
+        </aside>
+    </div>
+    <h4>hoooooooooooo</h4>
+
+
+    <div id="p1">item 1</div>
+    <div id="p1">item 1</div>
+    <div id="p1">item 1</div>
+    
+    <script>
+        console.log(window.document);
+        console.log(window.document.body);
+        console.log(typeof window.document.head);
+        
+        // console.log(document.body.h1);    //Not possible
+        var h=document.getElementById("h")
+        h.style.background="red";  //Target only 1st id
+
+        var clas =document.getElementsByClassName("myclass");
+        console.log(clas);
+        console.log(clas[0]);
+        console.log(Array.isArray(clas));
+
+        // clas.push(46)    //It is not pure Array
+
+        clas[0].style.background="yellow";
+        clas[2].style.background="yellow";
+
+       var pureArr= Array.from(clas)
+    //    pureArr.forEach((e)=>{
+    //     e.style.background="green";
+    //    })
+       
+       pureArr.forEach((e,i)=>{
+       (i%2==0)?e.style.background="green":e.style.background="blue";
+       })
+    var h3=document.getElementsByTagName("h3")
+    console.log(h3);
+ for (let i=0;i<h3.length;i++)
+ {
+    h3[i].style.background="pink";
+ }
+
+ var ele=document.querySelector("div aside h2")
+ console.log(ele);
+ ele.style.background="gold"
+
+ var ele2=document.querySelectorAll("h4")
+ console.log(ele2);
+//  ele2[0].style.background="perpal"
+
+// var p1=document.querySelectorAll("#p1")
+//  p1[0].style.background="red";
+var p1=document.querySelector("#p1")
+p1.style.background="red";
+
+
+
+
+
+    </script>
+</body>
+</html>

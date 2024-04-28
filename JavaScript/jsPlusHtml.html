@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* table{
+        border: 2px solid black;
+    } */
+   
+</style>
+<body>
+    <!-- <h1>dfgthyju</h1> -->
+        <h1>Using Html</h1>
+        <table border="2px" cellspacing="5px" >
+            <tr>
+                <td >1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+    
+    <script>
+        document.write("<h1>hello<h1><h2>hii<h2><h6>apple<h6>")
+        document.write("<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam provident labore magni quos debitis perferendis accusamus ut esse, rerum sed consectetur saepe repudiandae quae nam numquam, recusandae ipsam. Vero quasi eos pariatur ut accusantium, tempora, alias, ipsam corrupti fugit deleniti nobis officiis veniam ducimus nostrum!</p>")
+        document.write("<i>hii<i>") 
+        document.write("<hr>")   
+        
+        
+        let h2=document.createElement("h2")
+        console.log(h2);
+        h2.innerText=("Hello, I am Rahul Joglekar")
+        document.body.append(h2)
+
+       let table= document.createElement(`table`)
+       table.innerHTML=`<tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+    </tr>
+        <tr>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr> </table>`
+                document.body.append(table)
+    </script>
+</body>
+</html>

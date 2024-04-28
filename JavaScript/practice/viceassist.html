@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime or not</title>
+</head>
+<body>
+    <input type="text">
+    <button>check prime or not</button>
+    <h2>Get info</h2>
+
+    <script>
+       let input= document.querySelector('input')
+       let button= document.querySelector('button')
+       let h2= document.querySelector('h2')
+
+       button.addEventListener('click',()=>{
+        let data=input.value.trim()
+        if(data%2===0){
+            h2.innerText=`${data} is prime number`;
+            let speek=h2;
+            let boat=new SpeechSynthesisUtterance(speek.innerText);
+            speechSynthesis.speak(boat)
+        }
+        else{
+            h2.innerText=`${data} is not a prime number`;
+            let speek=h2;
+            let boat=new SpeechSynthesisUtterance(speek.innerText);
+            speechSynthesis.speak(boat)
+        }
+       })
+
+
+    </script>
+</body>
+</html>

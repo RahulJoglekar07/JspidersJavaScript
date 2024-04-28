@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+        div{
+            height: 600px;
+            width: 500px;
+            border: 2px solid black;
+            padding-top: 10px;
+            padding-left: 10px;
+            background-color: #BFCCB5;
+        }
+        button{
+            margin-top: 50px;
+            position: relative;
+            left: 90px;
+        }
+        
+        
+        input{
+            border: 2px solid black;
+        }
+  </style>
+    
+</head>
+<body>
+
+    <center>
+        <div>
+        <form action="">
+            <label for="">Name</label>
+            <input  autofocus  autocomplete="off" type="text" size="31px"><br><br>
+            <b id="nameError"></b>
+            <label for="">Email</label>
+            <input id="emailError" type="text" size="31px"><br><br>
+            <b id="emailError"></b>
+            <label for="">Mobile</label>
+            <input id="phoneError" type="text" size="30px"><br><br>
+            <b id="phoneError"></b>
+            <label for="">password</label>
+            <input type="text" size="28px"><br><br>
+            <b id="passError"></b>
+            <label for="">confirm password</label>
+            <input id="cpError" type="text"><br><br>
+            <b id="cpassError"></b><br>
+            <button type="reset">Reset</button>
+            <button id="submit">Submit</button>
+        </form>
+    </div>
+    </center>
+    
+    
+   <script src="filevalisdation.js"></script>
+    
+</body>
+</html>

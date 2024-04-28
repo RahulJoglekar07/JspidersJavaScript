@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>OBJECT</h1>
+    <script>
+      var a={
+        name:'rahu',
+        dob:'28-nov-2001',
+        quali:'BE',
+        bike:'deo'
+      }
+      console.log(a.dob);
+
+      var b={}
+      b.bike='R15'
+      b.car='BMW'
+      b.owner='Rahul'
+
+      console.log(b.owner);
+
+      var c={name:'rahul',
+        fun:()=>{
+        console.log('hello dear');
+    },
+    add:function(a,b){
+        console.log(a+b);
+
+    }}
+     c.fun()
+     c.add(1,6);
+
+     var d={lang1:'python',lang4:'java script',lang2:'HTML',lang3:'CSS',
+    language:{
+        city:'banglore'
+    }}
+     console.log(Object.keys(d));    // OUT PUT IN ARRAY
+     console.log(Object.values(d));  // OUT PUT IN ARRAY
+     console.log(Object.entries(d));
+
+     console.log(Object.freeze(d));
+     delete d.lang1;
+     d.language.city='Karvar'  //ONLY Child Value Can Change
+     d.lang1='hello'
+     d.language.city2='sirsi'
+     delete d.language.city;
+
+     console.log(Object.isFrozen(d));
+    
+
+    
+     var e={bike1:'deo',bike2:'r15',bike3:'rs200',
+    car:{car1:'supar'}}
+    console.log(Object.seal(e));
+    console.log(Object.isSealed(e.car));
+    delete e.bike1;   //DELETE IS NOT ALLOWED HERE AS OBJECT IS SEALED
+    e.bike1='bmw';
+    e.car.car2='ninja'
+    delete e.car.car1;
+    console.log(e);
+
+
+    </script>
+</body>
+</html>

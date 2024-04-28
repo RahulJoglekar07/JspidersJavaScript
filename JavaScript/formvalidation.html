@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        height: 300px;
+        width: 300px;
+        border: 2px solid black;
+        padding-top: 10px;
+        padding-left: 10px;
+        background-color: #BFCCB5;
+    }
+    button{
+        margin-top: 50px;
+        position: relative;
+        left: 90px;
+    }
+    
+    
+    input{
+        border: 2px solid black;
+    }
+</style>
+<body>
+    <center>
+    <div>
+    <form action="">
+        <label for="">Name</label>
+        <input id="nameError" autofocus  autocomplete="off" type="text" size="31px"><br><br>
+        <label for="">Email</label>
+        <input id="emailError" type="email" size="31px"><br><br>
+        <label for="">Mobile</label>
+        <input id="mobileError" type="text" size="30px"><br><br>
+        <label for="">password</label>
+        <input type="text" size="28px"><br><br>
+        <h3 id="passwordError"></h3>
+        <label for="">confirm password</label>
+        <input id="cpError" type="text"><br><br>
+        <button type="reset">Reset</button>
+        <button id="submit">Submit</button>
+    </form>
+</div>
+</center>
+    <script>
+        let input=document.querySelectorAll("input")
+        let nameError=document.querySelector("#nameError")
+        let emailError=document.querySelector("#emailError")
+        let mobileError=document.querySelector("#mobileError")
+        let passError=document.querySelector("#passwordError")
+        let cpError=document.querySelector("#cpError")
+        let submit=document.querySelector("#submit")
+        
+        let passEr=passError.value
+
+
+        submit.onclick=()=>{
+            console.log(nameError.value)
+        }
+
+        submit.addEventListener("click",(e)=>{
+            let name=input[0].value
+            let email=input[1].value
+            let mobile=input[2].value
+            let pass=input[3].value
+            let cpass=input[4].value 
+            
+            e.preventDefault();
+
+
+
+        })
+           
+
+      function evaluatepass(){
+        let str=passErr
+        let uc=0;
+        let lc=0;
+        let sc=0;
+        let nc=0;
+
+        if(str.length<8){
+            passError.inneText="password invalid"
+        }
+
+        for(let char of str)
+{
+    // console.log(char);
+    let schar="{}[]!@#$%&*()"
+
+    let asci=char.charCodeAt()
+    if(asci>=65 && asci<=90)
+    {
+        uc++
+        passError.inneText="password invalid must contain upper case"
+
+    }
+    else if(asci>=97 && asci<=122)
+    {
+        lc++
+        passError.inneText="password invalid must contain lower case"
+
+    }
+    else if(asci>=48 && asci<=57)
+    {
+        nc++
+        passError.inneText="password invalid mustcontain numerics"
+
+    }
+    else if(schar.includes(char)){
+        sc++
+        passError.inneText="password invalid must contain  special charecter"
+
+    }
+}
+console.log(sc+"  sc");
+console.log(lc+"  lc");
+console.log(uc+"  uc");
+console.log(nc+"  nc");
+
+
+
+      }
+
+    //   function evaluateConPass(x) {
+    //     {
+    //         let str =x
+    //         if{
+    //            if(x==){
+    //               cpError.inneText="confirm pass matching"
+    //            }
+    //            else {
+    //             cpError.innerText="confirm pass not matching"
+    //            }
+    //         }
+    //     }
+        
+    //   }
+      
+        
+
+
+
+
+
+    </script>
+</body>
+</html>

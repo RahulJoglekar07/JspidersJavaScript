@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     .p1{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: rgb(7, 7, 93);
+        
+     }
+    .c1{
+        height: 100px;
+        width: 100px;
+        border: 2px solid red;
+        
+    }
+    .c2{
+        height: 40px;
+        width: 120px;
+        /* border: 2px solid red; */
+        margin-top: 30px;
+        background-color: aqua;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .p2{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 20px;
+        color: rgb(7, 7, 93);
+     }
+</style>
+<body>
+   <div class="p1">
+    <div class="c1"></div>
+    <div class="c1" id="c1"></div>
+    <div class="c1" id="c2"></div>
+    <div class="c1" id="c3"></div>
+</div>
+<div class="p1">
+    <div class="c2"><b>click</b></div>
+    <div class="c2" id="c2"><b>dblclick</b></div>
+    <div class="c2" id="c3"><b>mouseout</b></div>
+    <div class="c2" id="c4"><b>mouseover</b></div>
+</div>
+<div class="p2">
+    <div class="c1" id="c4"></div>
+    <div class="c1" id="c5"></div>
+    <div class="c1" id="c6"></div>
+    <div class="c1" id="c7"></div>
+</div>
+<div class="p2">
+    <div class="c2" id="c5"><b>keyup</b></div>
+    <div class="c2" id="c6"><b>keydown</b></div>
+    <div class="c2" id="c7"><b>keypress</b></div>
+    <div class="c2" id="c8"><b>resize</b></div>
+</div>
+
+<script>
+   let ele= document.querySelector(".p1>.c2>b")
+   console.log(ele);
+   let ele2= document.querySelector(".p1>.c1")
+   console.log(ele2);
+   ele.addEventListener("click",()=>{
+    ele2.style.background="red"
+   })
+
+   let ele3= document.querySelector(".p1>#c2>b")
+   console.log(ele3);
+   let ele4= document.querySelector(".p1>#c1")
+   console.log(ele4);
+   ele3.addEventListener("dblclick",()=>{
+    ele4.style.background="yellow"
+   })
+
+   let ele5= document.querySelector(".p1>#c3>b")
+   console.log(ele5);
+   let ele6= document.querySelector(".p1>#c2")
+   console.log(ele6);
+   ele5.addEventListener("mouseout",()=>{
+    ele6.style.background="blue"
+   })
+
+   let ele7= document.querySelector(".p1>#c4>b")
+   console.log(ele7);
+   let ele8= document.querySelector(".p1>#c3")
+   console.log(ele8);
+   ele7.addEventListener("mouseover",()=>{
+    ele8.style.background="green"
+   })
+
+   let ele9= document.querySelector(".p2>#c5>b")
+   console.log(ele7);
+   let ele10= document.querySelector(".p2>#c4")
+   console.log(ele10);
+   ele9.addEventListener("keyup",()=>{
+    ele10.style.background="blue"
+   })
+
+   let ele11= document.querySelector(".p2>#c6>b")
+   console.log(ele11);
+   let ele12= document.querySelector(".p2>#c5")
+   console.log(ele12);
+   ele11.addEventListener("keydown",()=>{
+    ele12.style.background="yellow"
+   })
+
+   let ele13= document.querySelector(".p2>#c7>b")
+   console.log(ele13);
+   let ele14= document.querySelector(".p2>#c6")
+   console.log(ele14);
+   ele13.addEventListener("keypress",()=>{
+    ele14.style.background="pink"
+   })
+
+   let ele15= document.querySelector(".p2>#c8>b")
+   console.log(ele15);
+   let ele16= document.querySelector(".p2>#c7")
+   console.log(ele16);
+   ele15.addEventListener("resize",()=>{
+    ele16.style.background="red"
+   })
+
+
+
+
+</script>
+
+
+</body>
+</html>

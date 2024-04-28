@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2px">
+        <tr>
+            <th>name</th>
+            <th>imag</th>
+            <th>github Link</th>
+            
+        </tr>
+        <tr>
+            <th>abs</th>
+            <th><img src="" alt=""></th>
+            <th><a href="">link</a></th>
+            
+        </tr>
+    </table>
+    <!-- JSON -->
+    <!-- lang used to comunicate with server and clint side -->
+
+    <script>
+        let obj={
+            name:"raj",
+            id:123,
+        }
+        console.log(obj);
+        let json=JSON.stringify(obj)
+        console.log(json);
+        let jsomobj=JSON.parse(jsonobj)
+        console.log(jsomobj);
+        
+        let tab=document.querySelector("table")
+        let ans=fetch("https://api.gethub.com/user").then((e)=>{
+            console.log(e);
+            return res.json()
+        }).then((data)=>{
+            
+            console.log(data);
+            console.log(data[0].avatar_url);
+            data.forEach(element => {
+                console.log(element);
+                tab.innerHTML=`<tr>
+            <th>${element.login}</th>
+            <th><img src="${element.avatar_url}" alt=""></th>
+            <th><a href="${element.html_url}">link</a></th>  
+            </tr>`
+                
+            });
+
+        })
+        console.log(ans);
+
+
+
+        async function fetchdata() {
+          try{  let response=await fetch("https://api.github.com/users")
+            let jsonobj =await response.json()
+            console.log(jsonobj);
+        }
+        
+        catch(err){
+            console.log(err);
+        }
+        }
+        fetchdata();
+    </script>
+</body>
+</html>
